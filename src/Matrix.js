@@ -6,8 +6,10 @@ export default class Matrix extends Component {
   genRow = (vals) => (
     vals.map((val, id) => 
       // <Cell key={id} value={this.props.value}/>
-      <Cell key={id} {...val}/>
-    ) // replace me and render a cell component instead!
+      // <Cell key={id} {...val}/>
+      <Cell key={id} value={val}/>
+    )
+    // replace me and render a cell component instead!
   )
   
   genMatrix = () => (
@@ -19,7 +21,7 @@ export default class Matrix extends Component {
       <div id="matrix">
         {this.genMatrix()}
       </div>
-    )
+    );
   }
   
 }
@@ -37,4 +39,4 @@ Matrix.defaultProps = {
     ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00'],
     ['#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00', '#F00']
   ]
-}
+};
